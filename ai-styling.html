@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Stylist - Outfit Suggestions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Glass Card -->
+    <div class="glass-card">
+      <h1 class="title">AI Stylist</h1>
+      <p class="subtitle">Get personalized outfit recommendations</p>
+
+      <!-- Form Section -->
+      <div class="form">
+        <select id="occasion" required>
+          <option value="">Select Occasion</option>
+          <option value="casual">Casual</option>
+          <option value="office">Office</option>
+          <option value="party">Party</option>
+          <option value="wedding">Wedding</option>
+          <option value="date">Date Night</option>
+        </select>
+
+        <input type="text" id="city" placeholder="Enter your city" required>
+
+        <button onclick="generateOutfit()" class="btn">Suggest Outfit</button>
+      </div>
+
+      <!-- Weather Display -->
+      <div id="weather" class="hidden weather-box">
+        <p id="weatherText"></p>
+      </div>
+
+      <!-- Outfit Suggestion Section -->
+      <div id="outfitSuggestion" class="hidden outfit-card">
+        <h2>Recommended Outfit</h2>
+        <div class="outfit-grid">
+          <div class="outfit-item">
+            <img id="topImg" alt="Top">
+            <p>Top</p>
+          </div>
+          <div class="outfit-item">
+            <img id="bottomImg" alt="Bottom">
+            <p>Bottom</p>
+          </div>
+          <div class="outfit-item">
+            <img id="shoeImg" alt="Shoes">
+            <p>Shoes</p>
+          </div>
+        </div>
+        <p id="aiTip" class="ai-tip"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="styling.js"></script>
+</body>
+</html>
