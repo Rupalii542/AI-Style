@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartGulak — Login</title>
+  <link rel="stylesheet" href="login.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="card">
+    <div class="brand">
+      <div class="brand-logo">SG</div>
+      <div class="brand-title">SmartGulak</div>
+    </div>
+
+    <form id="loginForm" class="form">
+      <input id="username" class="input" type="text" placeholder="Username (e.g., rupalimangla.9842)" required />
+      <input id="fullName" class="input" type="text" placeholder="Full name (optional)" />
+      <input id="email" class="input" type="email" placeholder="Email (optional)" />
+
+      <div class="actions">
+        <button class="btn" type="submit"><i class="ri-login-box-line"></i> Login</button>
+      </div>
+      <div class="note">Login stores your profile locally on this device only.</div>
+    </form>
+  </div>
+
+  <script src="auth.js"></script>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const username = document.getElementById('username').value.trim();
+      const name = document.getElementById('fullName').value.trim();
+      const email = document.getElementById('email').value.trim();
+      saveLoggedInUser({ username, name, email });
+      window.location.href = 'dashboard.html';
+    });
+  </script>
+</body>
+</html>

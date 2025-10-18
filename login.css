@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root{
+  --bg: #0b1220;
+  --card: rgba(255,255,255,0.06);
+  --border: rgba(255,255,255,0.12);
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --primary1: #6d28d9; /* violet-700 */
+  --primary2: #9333ea; /* violet-600 */
+}
+
+*{box-sizing:border-box;}
+
+body{
+  margin:0; min-height:100vh; display:grid; place-items:center;
+  background: radial-gradient(1200px 800px at 10% -10%, #1f1c3a 0%, transparent 60%),
+              radial-gradient(1000px 600px at 110% 10%, #0f3a60 0%, transparent 60%),
+              linear-gradient(180deg, #0b1220 0%, #0e1729 100%);
+  color:var(--text);
+  font-family:'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+  padding:24px;
+}
+
+.card{
+  width:100%; max-width:440px; padding:28px 28px 22px; border-radius:20px;
+  background:var(--card); border:1px solid var(--border);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+}
+
+.brand{
+  display:flex; align-items:center; gap:10px; margin-bottom:18px;
+}
+
+.brand-logo{
+  height:36px; width:36px; border-radius:10px;
+  background: linear-gradient(135deg, var(--primary1), var(--primary2));
+  display:grid; place-items:center; color:white; font-weight:700;
+  box-shadow: 0 8px 24px rgba(147,51,234,0.35);
+}
+
+.brand-title{
+  font-weight:700; font-size:22px; letter-spacing:0.2px;
+  background: linear-gradient(135deg, #a78bfa, #60a5fa);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+
+.form{ display:grid; gap:14px; margin-top:6px; }
+
+.input{ width:100%; padding:12px 14px; border-radius:12px; border:1px solid var(--border);
+  background: rgba(255,255,255,0.04); color:var(--text); outline:none; transition: .2s ease; }
+.input::placeholder{ color:var(--muted); }
+.input:focus{ border-color:#7c3aed; box-shadow: 0 0 0 4px rgba(124,58,237,0.15); }
+
+.actions{ display:flex; align-items:center; justify-content:space-between; margin-top:6px; }
+
+.btn{
+  display:inline-flex; align-items:center; gap:8px; padding:12px 14px; border-radius:12px; border:0; cursor:pointer;
+  color:white; font-weight:600; background: linear-gradient(135deg, var(--primary1), var(--primary2));
+  box-shadow: 0 10px 24px rgba(109,40,217,0.35);
+}
+.btn:hover{ transform: translateY(-1px); box-shadow: 0 14px 32px rgba(109,40,217,0.42); }
+
+.note{ color:var(--muted); font-size:12px; margin-top:12px; }
